@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19696336202A9AF900C9D9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696335202A9AF900C9D9F9 /* AppDelegate.swift */; };
-		19696338202A9AF900C9D9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696337202A9AF900C9D9F9 /* ViewController.swift */; };
 		1969633B202A9AF900C9D9F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19696339202A9AF900C9D9F9 /* Main.storyboard */; };
 		1969633D202A9AF900C9D9F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1969633C202A9AF900C9D9F9 /* Assets.xcassets */; };
 		19696340202A9AF900C9D9F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1969633E202A9AF900C9D9F9 /* LaunchScreen.storyboard */; };
 		1969634B202A9AF900C9D9F9 /* littleWhiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969634A202A9AF900C9D9F9 /* littleWhiteTests.swift */; };
 		19696356202A9AF900C9D9F9 /* littleWhiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696355202A9AF900C9D9F9 /* littleWhiteUITests.swift */; };
+		19696380202AD30D00C9D9F9 /* LWTConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969637A202AD30D00C9D9F9 /* LWTConfig.swift */; };
+		19696381202AD30D00C9D9F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969637B202AD30D00C9D9F9 /* AppDelegate.swift */; };
+		19696382202AD30D00C9D9F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969637D202AD30D00C9D9F9 /* ViewController.swift */; };
+		19696383202AD30D00C9D9F9 /* LWTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969637E202AD30D00C9D9F9 /* LWTTabBarController.swift */; };
+		19696385202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696384202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift */; };
+		19696387202AD48400C9D9F9 /* LWTDailyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696386202AD48400C9D9F9 /* LWTDailyDataViewController.swift */; };
+		19696389202AD57600C9D9F9 /* LWTCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696388202AD57600C9D9F9 /* LWTCompletedViewController.swift */; };
+		1969638B202AD5BF00C9D9F9 /* LWTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		19696332202A9AF900C9D9F9 /* littleWhite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleWhite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		19696335202A9AF900C9D9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19696337202A9AF900C9D9F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1969633A202A9AF900C9D9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1969633C202A9AF900C9D9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1969633F202A9AF900C9D9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		19696351202A9AF900C9D9F9 /* littleWhiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = littleWhiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19696355202A9AF900C9D9F9 /* littleWhiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = littleWhiteUITests.swift; sourceTree = "<group>"; };
 		19696357202A9AF900C9D9F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1969637A202AD30D00C9D9F9 /* LWTConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWTConfig.swift; sourceTree = "<group>"; };
+		1969637B202AD30D00C9D9F9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1969637D202AD30D00C9D9F9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1969637E202AD30D00C9D9F9 /* LWTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LWTTabBarController.swift; sourceTree = "<group>"; };
+		19696384202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTLearnTimerViewController.swift; sourceTree = "<group>"; };
+		19696386202AD48400C9D9F9 /* LWTDailyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTDailyDataViewController.swift; sourceTree = "<group>"; };
+		19696388202AD57600C9D9F9 /* LWTCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTCompletedViewController.swift; sourceTree = "<group>"; };
+		1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +109,7 @@
 		19696334202A9AF900C9D9F9 /* littleWhite */ = {
 			isa = PBXGroup;
 			children = (
-				19696335202A9AF900C9D9F9 /* AppDelegate.swift */,
-				19696337202A9AF900C9D9F9 /* ViewController.swift */,
+				19696367202AD30D00C9D9F9 /* Class */,
 				19696339202A9AF900C9D9F9 /* Main.storyboard */,
 				1969633C202A9AF900C9D9F9 /* Assets.xcassets */,
 				1969633E202A9AF900C9D9F9 /* LaunchScreen.storyboard */,
@@ -123,6 +134,181 @@
 				19696357202A9AF900C9D9F9 /* Info.plist */,
 			);
 			path = littleWhiteUITests;
+			sourceTree = "<group>";
+		};
+		19696367202AD30D00C9D9F9 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				19696378202AD30D00C9D9F9 /* Main */,
+				1969636C202AD30D00C9D9F9 /* learnTimer */,
+				19696370202AD30D00C9D9F9 /* dailyData */,
+				19696368202AD30D00C9D9F9 /* completed */,
+				19696374202AD30D00C9D9F9 /* setting */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		19696368202AD30D00C9D9F9 /* completed */ = {
+			isa = PBXGroup;
+			children = (
+				19696369202AD30D00C9D9F9 /* Controller */,
+				1969636A202AD30D00C9D9F9 /* Model */,
+				1969636B202AD30D00C9D9F9 /* View */,
+			);
+			path = completed;
+			sourceTree = "<group>";
+		};
+		19696369202AD30D00C9D9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19696388202AD57600C9D9F9 /* LWTCompletedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1969636A202AD30D00C9D9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1969636B202AD30D00C9D9F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1969636C202AD30D00C9D9F9 /* learnTimer */ = {
+			isa = PBXGroup;
+			children = (
+				1969636D202AD30D00C9D9F9 /* Controller */,
+				1969636E202AD30D00C9D9F9 /* Model */,
+				1969636F202AD30D00C9D9F9 /* View */,
+			);
+			path = learnTimer;
+			sourceTree = "<group>";
+		};
+		1969636D202AD30D00C9D9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19696384202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1969636E202AD30D00C9D9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1969636F202AD30D00C9D9F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19696370202AD30D00C9D9F9 /* dailyData */ = {
+			isa = PBXGroup;
+			children = (
+				19696371202AD30D00C9D9F9 /* Controller */,
+				19696372202AD30D00C9D9F9 /* Model */,
+				19696373202AD30D00C9D9F9 /* View */,
+			);
+			path = dailyData;
+			sourceTree = "<group>";
+		};
+		19696371202AD30D00C9D9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19696386202AD48400C9D9F9 /* LWTDailyDataViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19696372202AD30D00C9D9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19696373202AD30D00C9D9F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19696374202AD30D00C9D9F9 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				19696375202AD30D00C9D9F9 /* Controller */,
+				19696376202AD30D00C9D9F9 /* Model */,
+				19696377202AD30D00C9D9F9 /* View */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		19696375202AD30D00C9D9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19696376202AD30D00C9D9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19696377202AD30D00C9D9F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19696378202AD30D00C9D9F9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				19696379202AD30D00C9D9F9 /* Other */,
+				1969637C202AD30D00C9D9F9 /* Controller */,
+				1969637F202AD30D00C9D9F9 /* Lib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		19696379202AD30D00C9D9F9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1969637A202AD30D00C9D9F9 /* LWTConfig.swift */,
+				1969637B202AD30D00C9D9F9 /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1969637C202AD30D00C9D9F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1969637D202AD30D00C9D9F9 /* ViewController.swift */,
+				1969637E202AD30D00C9D9F9 /* LWTTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1969637F202AD30D00C9D9F9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +373,7 @@
 		1969632A202A9AF900C9D9F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LWT;
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = zynabc;
@@ -259,8 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19696338202A9AF900C9D9F9 /* ViewController.swift in Sources */,
-				19696336202A9AF900C9D9F9 /* AppDelegate.swift in Sources */,
+				19696382202AD30D00C9D9F9 /* ViewController.swift in Sources */,
+				19696385202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift in Sources */,
+				19696381202AD30D00C9D9F9 /* AppDelegate.swift in Sources */,
+				19696389202AD57600C9D9F9 /* LWTCompletedViewController.swift in Sources */,
+				19696380202AD30D00C9D9F9 /* LWTConfig.swift in Sources */,
+				1969638B202AD5BF00C9D9F9 /* LWTSettingViewController.swift in Sources */,
+				19696387202AD48400C9D9F9 /* LWTDailyDataViewController.swift in Sources */,
+				19696383202AD30D00C9D9F9 /* LWTTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
