@@ -48,7 +48,7 @@ class LWTTabBarController: UITabBarController {
             VC.title = vcItem.object(forKey: kTitleKey) as? String
             navVC.tabBarItem.image = UIImage.init(named: vcItem.object(forKey: kImgKey) as! String)
             navVC.tabBarItem.selectedImage = UIImage.init(named: vcItem.object(forKey: kSelImgKey) as! String)
-            navVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor :UIColor.init(red: 0, green: 190, blue: 12, alpha: 1.0)], for: UIControlState.selected)
+            navVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor :UIColor.black], for: UIControlState.selected)
             self.addChildViewController(navVC)
         }
     }

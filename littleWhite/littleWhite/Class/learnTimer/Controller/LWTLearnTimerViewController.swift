@@ -14,15 +14,7 @@ class LWTLearnTimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.brown
-        let searchBar = UISearchBar.init()
-        self.view.addSubview(searchBar)
-        searchBar.snp.makeConstraints { (make) -> Void in
-            make.width.equalTo(SCREEN_WIDTH-60)
-            make.height.equalTo(NAV_HEIGHT-30)
-            make.left.equalTo(self.view).offset(10)
-            make.top.equalTo(self.view).offset(25)
-        }
+        self.setupSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +28,48 @@ class LWTLearnTimerViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    func setupSubviews() {
+        let addTaskView = UIView.init()
+        addTaskView.backgroundColor = UIColor.init(red: 37/255.0, green: 37/255.0, blue: 37/255.0, alpha: 1.0)
+        self.view.addSubview(addTaskView)
+        addTaskView.snp.makeConstraints { (make) in
+            make.height.equalTo(NAV_HEIGHT)
+            make.left.top.right.equalTo(0)
+        }
+        
+        let taskTextField = UITextField.init()
+        taskTextField.attributedPlaceholder = NSAttributedString.init(string: "输入25分钟完成的目标", attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize:15)])
+        taskTextField.textColor = .lightGray
+        addTaskView.addSubview(taskTextField)
+        taskTextField.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(SCREEN_WIDTH-60)
+            make.height.equalTo(NAV_HEIGHT-30)
+            make.left.equalTo(addTaskView).offset(10)
+            make.top.equalTo(addTaskView).offset(25)
+        }
+        
+        let addBtn = UIButton.init(type: UIButtonType.contactAdd)
+        addTaskView.addSubview(addBtn)
+        addBtn.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(34)
+            make.height.equalTo(NAV_HEIGHT-30)
+            make.left.equalTo(taskTextField.snp.right).offset(6)
+            make.centerY.equalTo(taskTextField)
+        }
+        
+        let tableview = UITableView.init()
+        tableview.backgroundColor = rgbColor(r :179, g :235, b :235)
+        self.view.addSubview(tableview)
+        tableview.snp.makeConstraints { (make) in
+            make.left.right.equalTo(0)
+            make.top.equalTo(addTaskView.snp.bottom)
+            make.height.equalTo(scaleHeight(height: 236))
+        }
+    }
+
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

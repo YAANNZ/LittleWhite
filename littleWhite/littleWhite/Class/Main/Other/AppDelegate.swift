@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
         let vc = LWTTabBarController()
-//        window?.backgroundColor = .white;
+        window?.backgroundColor = .white;
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
