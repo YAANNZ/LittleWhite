@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class LWTLearnTimerViewController: UIViewController {
 
@@ -14,10 +15,14 @@ class LWTLearnTimerViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.brown
-        
-        let searchBar = UISearchBar.init(frame: CGRect(x: 10, y: 25, width: SCREEN_WIDTH-60, height:NAV_HEIGHT-30))
-        
+        let searchBar = UISearchBar.init()
         self.view.addSubview(searchBar)
+        searchBar.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(SCREEN_WIDTH-60)
+            make.height.equalTo(NAV_HEIGHT-30)
+            make.left.equalTo(self.view).offset(10)
+            make.top.equalTo(self.view).offset(25)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

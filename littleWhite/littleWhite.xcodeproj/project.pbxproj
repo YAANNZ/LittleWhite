@@ -20,6 +20,7 @@
 		19696387202AD48400C9D9F9 /* LWTDailyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696386202AD48400C9D9F9 /* LWTDailyDataViewController.swift */; };
 		19696389202AD57600C9D9F9 /* LWTCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696388202AD57600C9D9F9 /* LWTCompletedViewController.swift */; };
 		1969638B202AD5BF00C9D9F9 /* LWTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */; };
+		E2C5563B60EB8ADFFCEC2C81 /* Pods_littleWhite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F81A3ADA8946D3D5502A42F /* Pods_littleWhite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F81A3ADA8946D3D5502A42F /* Pods_littleWhite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_littleWhite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19696332202A9AF900C9D9F9 /* littleWhite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = littleWhite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1969633A202A9AF900C9D9F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1969633C202A9AF900C9D9F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		19696386202AD48400C9D9F9 /* LWTDailyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTDailyDataViewController.swift; sourceTree = "<group>"; };
 		19696388202AD57600C9D9F9 /* LWTCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTCompletedViewController.swift; sourceTree = "<group>"; };
 		1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTSettingViewController.swift; sourceTree = "<group>"; };
+		6ADB714C9CAFBBE4B4D0B0BF /* Pods-littleWhite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleWhite.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite.release.xcconfig"; sourceTree = "<group>"; };
+		B3067DD201EC1F79C625D47C /* Pods-littleWhite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleWhite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C5563B60EB8ADFFCEC2C81 /* Pods_littleWhite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,8 @@
 				19696349202A9AF900C9D9F9 /* littleWhiteTests */,
 				19696354202A9AF900C9D9F9 /* littleWhiteUITests */,
 				19696333202A9AF900C9D9F9 /* Products */,
+				8CD355C7E27D4192A1E3B40F /* Pods */,
+				DB5A647D683CB78B59E5A357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,6 +318,23 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		8CD355C7E27D4192A1E3B40F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3067DD201EC1F79C625D47C /* Pods-littleWhite.debug.xcconfig */,
+				6ADB714C9CAFBBE4B4D0B0BF /* Pods-littleWhite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB5A647D683CB78B59E5A357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F81A3ADA8946D3D5502A42F /* Pods_littleWhite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1969635A202A9AF900C9D9F9 /* Build configuration list for PBXNativeTarget "littleWhite" */;
 			buildPhases = (
+				28B0D44CABC75114D37E7358 /* [CP] Check Pods Manifest.lock */,
 				1969632E202A9AF900C9D9F9 /* Sources */,
 				1969632F202A9AF900C9D9F9 /* Frameworks */,
 				19696330202A9AF900C9D9F9 /* Resources */,
+				65B88822135B37C1D6B47C4C /* [CP] Embed Pods Frameworks */,
+				8570B97A164479091730BCAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,6 +467,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28B0D44CABC75114D37E7358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-littleWhite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65B88822135B37C1D6B47C4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8570B97A164479091730BCAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1969632E202A9AF900C9D9F9 /* Sources */ = {
@@ -617,6 +698,7 @@
 		};
 		1969635B202A9AF900C9D9F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3067DD201EC1F79C625D47C /* Pods-littleWhite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +714,7 @@
 		};
 		1969635C202A9AF900C9D9F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ADB714C9CAFBBE4B4D0B0BF /* Pods-littleWhite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

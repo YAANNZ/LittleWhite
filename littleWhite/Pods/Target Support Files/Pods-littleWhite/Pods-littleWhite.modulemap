@@ -1,0 +1,6 @@
+framework module Pods_littleWhite {
+  umbrella header "Pods-littleWhite-umbrella.h"
+
+  export *
+  module * { export * }
+}
