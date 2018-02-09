@@ -9,8 +9,14 @@
 import UIKit
 import SnapKit
 
-class LWTLearnTimerViewController: UIViewController {
-
+class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var tableView: UITableView!
+    lazy var tasksArray = { () -> NSMutableArray in
+        let lazyTasksArray = NSMutableArray()
+        return lazyTasksArray
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,17 +64,27 @@ class LWTLearnTimerViewController: UIViewController {
             make.centerY.equalTo(taskTextField)
         }
         
-        let tableview = UITableView.init()
-        tableview.backgroundColor = rgbColor(r :179, g :235, b :235)
-        self.view.addSubview(tableview)
-        tableview.snp.makeConstraints { (make) in
+        tableView = UITableView.init()
+        tableView.backgroundColor = rgbColor(r :179, g :235, b :235)
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
             make.left.right.equalTo(0)
             make.top.equalTo(addTaskView.snp.bottom)
             make.height.equalTo(scaleHeight(height: 236))
         }
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasksArray.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = tasksArray.object(at: indexPath.row) as? String
+        return cell
+    }
     
     
     override func didReceiveMemoryWarning() {
