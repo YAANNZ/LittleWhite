@@ -37,7 +37,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     
     func setupSubviews() {
         let addTaskView = UIView.init()
-        addTaskView.backgroundColor = UIColor.init(red: 37/255.0, green: 37/255.0, blue: 37/255.0, alpha: 1.0)
+        addTaskView.backgroundColor = rgbColor(r: 37, g: 37, b: 37)
         self.view.addSubview(addTaskView)
         addTaskView.snp.makeConstraints { (make) in
             make.height.equalTo(NAV_HEIGHT)
@@ -74,6 +74,18 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.top.equalTo(addTaskView.snp.bottom)
             make.height.equalTo(scaleHeight(height: 236))
         }
+        
+        let littleWhiteImgV = UIImageView()
+        littleWhiteImgV.backgroundColor = UIColor.brown
+        littleWhiteImgV.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(littleWhiteImgVTap))
+        littleWhiteImgV.addGestureRecognizer(tapGesture)
+        self.view.addSubview(littleWhiteImgV)
+        littleWhiteImgV.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo(0)
+            make.top.equalTo(tableView.snp.bottom).offset(scaleHeight(height: 50))
+            make.bottom.equalTo(49)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +96,10 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = UITableViewCell()
         cell.textLabel?.text = tasksArray.object(at: indexPath.row) as? String
         return cell
+    }
+    
+    @objc func littleWhiteImgVTap() {
+        
     }
     
     
