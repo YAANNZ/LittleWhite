@@ -12,6 +12,8 @@ import SnapKit
 class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tableView: UITableView!
+    var taskTextField: UITextField!
+    
     lazy var tasksArray = { () -> NSMutableArray in
         let lazyTasksArray = NSMutableArray()
         return lazyTasksArray
@@ -44,7 +46,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.left.top.right.equalTo(0)
         }
         
-        let taskTextField = UITextField.init()
+        taskTextField = UITextField.init()
         taskTextField.attributedPlaceholder = NSAttributedString.init(string: "输入25分钟完成的目标", attributes: [NSAttributedStringKey.foregroundColor:UIColor.lightGray,NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize:15)])
         taskTextField.textColor = .lightGray
         addTaskView.addSubview(taskTextField)
@@ -56,6 +58,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
         let addBtn = UIButton.init(type: UIButtonType.contactAdd)
+        addBtn.addTarget(self, action: #selector(addBtnClicked), for: UIControlEvents.touchUpInside)
         addTaskView.addSubview(addBtn)
         addBtn.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(34)
@@ -84,7 +87,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         littleWhiteImgV.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(0)
             make.top.equalTo(tableView.snp.bottom).offset(scaleHeight(height: 50))
-            make.bottom.equalTo(49)
+            make.bottom.equalTo(-49)
         }
     }
 
@@ -94,12 +97,20 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.backgroundColor = rgbColor(r :179, g :235, b :235)
         cell.textLabel?.text = tasksArray.object(at: indexPath.row) as? String
         return cell
     }
     
+    
+    @objc func addBtnClicked() {
+        if ((taskTextField.text?.count) != 0) {
+            tasksArray.add(taskTextField.text as Any)
+            tableView.reloadData()
+        }
+    }
+    
     @objc func littleWhiteImgVTap() {
-        
     }
     
     
