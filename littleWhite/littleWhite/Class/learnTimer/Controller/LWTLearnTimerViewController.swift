@@ -89,6 +89,44 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.top.equalTo(tableView.snp.bottom).offset(scaleHeight(height: 50))
             make.bottom.equalTo(-49)
         }
+        
+        let msgImgV = UIImageView()
+        msgImgV.backgroundColor = rgbColor(r: 234, g: 234, b: 234)
+        msgImgV.layer.borderWidth = 1.5
+        msgImgV.layer.borderColor = rgbColor(r: 93, g: 93, b: 93).cgColor
+        self.view.addSubview(msgImgV)
+        msgImgV.snp.makeConstraints { (make) in
+            make.width.equalTo(scaleWidth(width: 260))
+            make.height.equalTo(scaleWidth(width: 175))
+            make.bottom.equalTo(tableView.snp.bottom).offset(scaleWidth(width: 85))
+            make.right.equalTo(-10)
+        }
+        
+        let startBtn = UIButton.init(type: UIButtonType.custom)
+        startBtn.addTarget(self, action: #selector(startBtnClicked), for: UIControlEvents.touchUpInside)
+        startBtn.backgroundColor = .red
+        startBtn.layer.cornerRadius = 20
+        startBtn.setTitle("开始", for: UIControlState.normal)
+        self.view.addSubview(startBtn)
+        startBtn.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(msgImgV.snp.bottom).offset(30)
+            make.height.equalTo(40)
+            make.width.equalTo(80)
+            make.right.equalTo(-10)
+        }
+        
+        let storyBtn = UIButton.init(type: UIButtonType.custom)
+        storyBtn.addTarget(self, action: #selector(storyBtnClicked), for: UIControlEvents.touchUpInside)
+        storyBtn.backgroundColor = .red
+        storyBtn.layer.cornerRadius = 20
+        storyBtn.setTitle("故事", for: UIControlState.normal)
+        self.view.addSubview(storyBtn)
+        storyBtn.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(startBtn.snp.bottom).offset(5)
+            make.height.equalTo(40)
+            make.width.equalTo(80)
+            make.right.equalTo(-10)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,6 +151,11 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     @objc func littleWhiteImgVTap() {
     }
     
+    @objc func startBtnClicked() {
+    }
+    
+    @objc func storyBtnClicked() {
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
