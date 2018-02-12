@@ -22,7 +22,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setupSubviews()
+        setupSubviews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
