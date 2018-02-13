@@ -13,7 +13,7 @@ class LWTCompletedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.yellow
+//        self.view.backgroundColor = UIColor.yellow
     }
 
     override func didReceiveMemoryWarning() {

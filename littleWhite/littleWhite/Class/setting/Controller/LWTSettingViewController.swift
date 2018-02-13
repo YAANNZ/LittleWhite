@@ -13,7 +13,7 @@ class LWTSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.lightGray
+//        self.view.backgroundColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {

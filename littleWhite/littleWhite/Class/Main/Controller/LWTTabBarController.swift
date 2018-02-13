@@ -21,23 +21,23 @@ class LWTTabBarController: UITabBarController {
         let childItemsArray:NSArray = [
             [kClassKey : "littleWhite.LWTLearnTimerViewController",
              kTitleKey  : "学习计时",
-             kImgKey    : "tabbar_mainframe",
-             kSelImgKey : "tabbar_mainframeHL"],
+             kImgKey    : "time",
+             kSelImgKey : "time_sel"],
             
             [kClassKey : "littleWhite.LWTDailyDataViewController",
              kTitleKey  : "每日数据",
-             kImgKey    : "tabbar_contacts",
-             kSelImgKey : "tabbar_contactsHL"],
+             kImgKey    : "dailyData",
+             kSelImgKey : "dailyData_sel"],
             
             [kClassKey  : "littleWhite.LWTCompletedViewController",
              kTitleKey  : "已完成",
-             kImgKey    : "tabbar_discover",
-             kSelImgKey : "tabbar_discoverHL"],
+             kImgKey    : "completed",
+             kSelImgKey : "completed_sel"],
             
             [kClassKey : "littleWhite.LWTSettingViewController",
              kTitleKey  : "设置",
-             kImgKey    : "tabbar_me",
-             kSelImgKey : "tabbar_meHL"] ];
+             kImgKey    : "setting",
+             kSelImgKey : "setting_sel"] ];
         
         for item in childItemsArray {
             let vcItem = item as! NSDictionary
@@ -48,7 +48,8 @@ class LWTTabBarController: UITabBarController {
             navVC.tabBarItem.image = UIImage.init(named: vcItem.object(forKey: kImgKey) as! String)
             navVC.tabBarItem.selectedImage = UIImage.init(named: vcItem.object(forKey: kSelImgKey) as! String)
             navVC.navigationBar.barTintColor = rgbColor(r: 37, g: 37, b: 37)
-            navVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor :UIColor.black], for: UIControlState.selected)
+            navVC.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor :UIColor.black], for: UIControlState.selected)
             self.addChildViewController(navVC)
         }
     }
