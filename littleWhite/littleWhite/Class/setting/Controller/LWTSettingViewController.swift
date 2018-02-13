@@ -8,14 +8,42 @@
 
 import UIKit
 
-class LWTSettingViewController: UIViewController {
+class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    var tableView: UITableView!
+    
+    lazy var settingsArray = { () -> NSMutableArray in
+        let lazySettingsArray = NSMutableArray()
+        return lazySettingsArray
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.view.backgroundColor = UIColor.lightGray
+        setupSubview()
     }
 
+    func setupSubview() {
+        tableView = UITableView.init()
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.left.top.right.bottom.equalTo(0)
+        }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settingsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.backgroundColor = rgbColor(r :179, g :235, b :235)
+        cell.textLabel?.text = settingsArray.object(at: indexPath.row) as? String
+        return cell
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
