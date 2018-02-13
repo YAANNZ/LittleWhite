@@ -127,6 +127,34 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.width.equalTo(80)
             make.right.equalTo(-10)
         }
+        
+        let levelView = UIView.init()
+        levelView.backgroundColor = .white
+        self.view.addSubview(levelView)
+        levelView.snp.makeConstraints { (make) in
+            make.width.equalTo(150)
+            make.height.equalTo(75)
+            make.right.equalTo(0)
+            make.top.equalTo(storyBtn.snp.bottom).offset(30)
+        }
+        
+        let levelLabel = UILabel()
+        levelLabel.text = "新手任务"
+        levelLabel.font = UIFont.systemFont(ofSize: 23, weight: UIFont.Weight(rawValue: 1.0))
+        levelView.addSubview(levelLabel)
+        levelLabel.snp.makeConstraints { (make) in
+            make.left.top.equalTo(0)
+        }
+        
+        let learnTimeLabel = UILabel()
+        learnTimeLabel.numberOfLines = 0
+        learnTimeLabel.text = "总共已进行\n0小时42分钟"
+        learnTimeLabel.font = UIFont.systemFont(ofSize: 13)
+        levelView.addSubview(learnTimeLabel)
+        learnTimeLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(0)
+            make.top.equalTo(levelLabel.snp.bottom)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
