@@ -57,7 +57,8 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.top.equalTo(addTaskView).offset(25)
         }
         
-        let addBtn = UIButton.init(type: UIButtonType.contactAdd)
+        let addBtn = UIButton.init(type: UIButtonType.custom)
+        addBtn.setBackgroundImage(UIImage.init(named: "nav_add"), for: UIControlState.normal)
         addBtn.addTarget(self, action: #selector(addBtnClicked), for: UIControlEvents.touchUpInside)
         addTaskView.addSubview(addBtn)
         addBtn.snp.makeConstraints { (make) -> Void in

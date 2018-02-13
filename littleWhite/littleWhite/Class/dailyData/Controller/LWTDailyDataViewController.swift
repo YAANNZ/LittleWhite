@@ -12,10 +12,27 @@ class LWTDailyDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.view.backgroundColor = UIColor.blue
+        
+        setupSubview()
     }
 
+    func setupSubview() {
+        let shareBtn = UIButton.init(type: UIButtonType.custom)
+        shareBtn.setBackgroundImage(UIImage.init(named: "nav_add"), for: UIControlState.normal)
+        shareBtn.addTarget(self, action: #selector(shareBtnClicked), for: UIControlEvents.touchUpInside)
+        self.navigationController?.navigationBar.addSubview(shareBtn)
+        shareBtn.snp.makeConstraints { (make) -> Void in
+            make.width.equalTo(34)
+            make.height.equalTo(34)
+            make.left.equalTo(20)
+            make.top.equalTo(5)
+        }
+    }
+    
+    @objc func shareBtnClicked() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
