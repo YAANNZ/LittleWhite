@@ -12,9 +12,9 @@ class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableView
 
     var tableView: UITableView!
     
-    lazy var settingsArray = { () -> NSMutableArray in
-        let lazySettingsArray = NSMutableArray()
-        return lazySettingsArray
+    lazy var settingsArray = { () -> NSArray in
+        let lazySettingsArray = [["决心模式网络", "自定义决心誓言", "桌面图标数字"], ["工作术/FAQ", "支持小白👍", "给本app评分", "给作者留言", "举手猜词"], ["重看新手引导", "重新开始故事模式", "恢复购买"]]
+        return lazySettingsArray as NSArray
     }()
     
     override func viewDidLoad() {
