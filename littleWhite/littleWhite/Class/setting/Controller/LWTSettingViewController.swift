@@ -38,10 +38,13 @@ class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = rgbColor(r :179, g :235, b :235)
-        cell.textLabel?.text = settingsArray.object(at: indexPath.row) as? String
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")
+        if cell == nil {
+            cell = UITableViewCell()
+        }
+        cell?.backgroundColor = rgbColor(r :179, g :235, b :235)
+        cell?.textLabel?.text = settingsArray.object(at: indexPath.row) as? String
+        return cell!
     }
     
     override func didReceiveMemoryWarning() {
