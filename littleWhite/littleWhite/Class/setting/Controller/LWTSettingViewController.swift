@@ -27,7 +27,7 @@ class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableView
         tableView = UITableView.init()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.lightGray
+        tableView.backgroundColor = rgbColor(r: 230, g: 230, b: 230)
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.left.top.right.bottom.equalTo(0)

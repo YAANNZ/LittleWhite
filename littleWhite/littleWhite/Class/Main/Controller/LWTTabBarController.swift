@@ -30,7 +30,7 @@ class LWTTabBarController: UITabBarController {
              kSelImgKey : "dailyData_sel"],
             
             [kClassKey  : "littleWhite.LWTCompletedViewController",
-             kTitleKey  : "已完成",
+             kTitleKey  : "已完成目标",
              kImgKey    : "completed",
              kSelImgKey : "completed_sel"],
             
