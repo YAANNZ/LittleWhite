@@ -27,23 +27,40 @@ class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableView
         tableView = UITableView.init()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor.lightGray
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.left.top.right.bottom.equalTo(0)
         }
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return settingsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (settingsArray.object(at: section) as! NSArray).count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")
         if cell == nil {
             cell = UITableViewCell()
+            cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         }
-        cell?.backgroundColor = rgbColor(r :179, g :235, b :235)
-        cell?.textLabel?.text = settingsArray.object(at: indexPath.row) as? String
+        cell?.textLabel?.text = (settingsArray.object(at: indexPath.section) as! NSArray).object(at: indexPath.row) as? String
         return cell!
     }
     
