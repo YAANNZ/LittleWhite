@@ -10,6 +10,10 @@ import UIKit
 
 class LWTDailyDataViewController: UIViewController {
 
+    var efficiencyView: UIView!
+    var levelView: UIView!
+    var timeView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +21,9 @@ class LWTDailyDataViewController: UIViewController {
     }
 
     func setupSubview() {
+        
+        self.view.backgroundColor = rgbColor(r: 230, g: 230, b: 230)
+        
         let shareBtn = UIButton.init(type: UIButtonType.custom)
         shareBtn.setBackgroundImage(UIImage.init(named: "nav_add"), for: UIControlState.normal)
         shareBtn.addTarget(self, action: #selector(shareBtnClicked), for: UIControlEvents.touchUpInside)
@@ -26,6 +33,39 @@ class LWTDailyDataViewController: UIViewController {
             make.height.equalTo(34)
             make.left.equalTo(20)
             make.top.equalTo(5)
+        }
+        
+        efficiencyView = UIView()
+        efficiencyView.layer.cornerRadius = 10
+        efficiencyView.backgroundColor = .white
+        self.view.addSubview(efficiencyView)
+        efficiencyView.snp.makeConstraints { (make) in
+            make.top.equalTo(15+NAV_HEIGHT)
+            make.height.equalTo(SCREEN_WIDTH-40)
+            make.width.equalTo(SCREEN_WIDTH-60)
+            make.centerX.equalTo(SCREEN_WIDTH/2)
+        }
+        
+        levelView = UIView()
+        levelView.layer.cornerRadius = 10
+        levelView.backgroundColor = .white
+        self.view.addSubview(levelView)
+        levelView.snp.makeConstraints { (make) in
+            make.top.equalTo(20+NAV_HEIGHT)
+            make.height.equalTo(SCREEN_WIDTH-40)
+            make.width.equalTo(SCREEN_WIDTH-50)
+            make.centerX.equalTo(SCREEN_WIDTH/2)
+        }
+        
+        timeView = UIView()
+        timeView.layer.cornerRadius = 10
+        timeView.backgroundColor = .white
+        self.view.addSubview(timeView)
+        timeView.snp.makeConstraints { (make) in
+            make.top.equalTo(25+NAV_HEIGHT)
+            make.height.equalTo(SCREEN_WIDTH-40)
+            make.width.equalTo(SCREEN_WIDTH-40)
+            make.centerX.equalTo(SCREEN_WIDTH/2)
         }
     }
     
