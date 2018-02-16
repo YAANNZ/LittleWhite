@@ -173,7 +173,10 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     @objc func addBtnClicked() {
-        if ((taskTextField.text?.count) != 0) {
+        if ((taskTextField.text?.count) == 0) {
+            taskTextField.becomeFirstResponder()
+        } else {
+            taskTextField.resignFirstResponder()
             tasksArray.add(taskTextField.text as Any)
             tableView.reloadData()
         }
@@ -212,6 +215,9 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        taskTextField.resignFirstResponder()
+    }
 
     /*
     // MARK: - Navigation
