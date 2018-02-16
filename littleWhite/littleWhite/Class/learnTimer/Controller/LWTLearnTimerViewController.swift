@@ -13,6 +13,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     
     var tableView: UITableView!
     var taskTextField: UITextField!
+    var msgImgV: UIImageView!
     
     lazy var tasksArray = { () -> NSMutableArray in
         let lazyTasksArray = NSMutableArray()
@@ -91,15 +92,16 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.bottom.equalTo(-49)
         }
         
-        let msgImgV = UIImageView()
+        msgImgV = UIImageView()
         msgImgV.backgroundColor = rgbColor(r: 234, g: 234, b: 234)
         msgImgV.layer.borderWidth = 1.5
         msgImgV.layer.borderColor = rgbColor(r: 93, g: 93, b: 93).cgColor
+        msgImgV.isHidden = true
         self.view.addSubview(msgImgV)
         msgImgV.snp.makeConstraints { (make) in
             make.width.equalTo(scaleWidth(width: 260))
             make.height.equalTo(scaleWidth(width: 175))
-            make.bottom.equalTo(tableView.snp.bottom).offset(scaleWidth(width: 85))
+            make.bottom.equalTo(self.view.snp.bottom).offset(-49)
             make.right.equalTo(-10)
         }
         
@@ -110,7 +112,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         startBtn.setTitle("开始", for: UIControlState.normal)
         self.view.addSubview(startBtn)
         startBtn.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(msgImgV.snp.bottom).offset(30)
+            make.top.equalTo(tableView.snp.bottom).offset(scaleWidth(width: 112))
             make.height.equalTo(40)
             make.width.equalTo(80)
             make.right.equalTo(-10)
@@ -178,6 +180,25 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @objc func littleWhiteImgVTap() {
+        if msgImgV.isHidden{
+            self.msgImgV.isHidden = false
+            UIView.animate(withDuration: 1.0, animations: {
+                self.msgImgV.snp.updateConstraints({ (make) in
+                    make.bottom.equalTo(self.view.snp.bottom).offset(scaleWidth(width: -225)-49)
+                })
+            })
+        } else {
+            UIView.animate(withDuration: 1.0, animations: {
+                self.msgImgV.snp.updateConstraints({ (make) in
+                    make.bottom.equalTo(self.view.snp.bottom).offset(-(SCREEN_HEIGHT-scaleWidth(width: 175)))
+                })
+            }, completion: { (isCom) in
+                self.msgImgV.isHidden = true
+                self.msgImgV.snp.updateConstraints({ (make) in
+                    make.bottom.equalTo(self.view.snp.bottom).offset(-49)
+                })
+            })
+        }
     }
     
     @objc func startBtnClicked() {
