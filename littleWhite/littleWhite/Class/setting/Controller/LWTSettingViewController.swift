@@ -64,6 +64,16 @@ class LWTSettingViewController: UIViewController,UITableViewDelegate,UITableView
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let fqaVC = LWTFQAViewController()
+            fqaVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(fqaVC, animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
