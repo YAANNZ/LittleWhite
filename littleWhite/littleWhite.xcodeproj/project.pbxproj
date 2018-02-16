@@ -22,6 +22,7 @@
 		1969638B202AD5BF00C9D9F9 /* LWTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */; };
 		19696395203194D100C9D9F9 /* LWTDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19696394203194D100C9D9F9 /* LWTDBManager.swift */; };
 		198BD6532034954D00FEA818 /* LWTSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BD6522034954D00FEA818 /* LWTSettingTableViewCell.swift */; };
+		198BD6552037301100FEA818 /* LWTStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BD6542037301100FEA818 /* LWTStoryViewController.swift */; };
 		E2C5563B60EB8ADFFCEC2C81 /* Pods_littleWhite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F81A3ADA8946D3D5502A42F /* Pods_littleWhite.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		1969638A202AD5BF00C9D9F9 /* LWTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTSettingViewController.swift; sourceTree = "<group>"; };
 		19696394203194D100C9D9F9 /* LWTDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTDBManager.swift; sourceTree = "<group>"; };
 		198BD6522034954D00FEA818 /* LWTSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTSettingTableViewCell.swift; sourceTree = "<group>"; };
+		198BD6542037301100FEA818 /* LWTStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWTStoryViewController.swift; sourceTree = "<group>"; };
 		6ADB714C9CAFBBE4B4D0B0BF /* Pods-littleWhite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleWhite.release.xcconfig"; path = "Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite.release.xcconfig"; sourceTree = "<group>"; };
 		B3067DD201EC1F79C625D47C /* Pods-littleWhite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleWhite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-littleWhite/Pods-littleWhite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				19696384202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift */,
+				198BD6542037301100FEA818 /* LWTStoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19696382202AD30D00C9D9F9 /* ViewController.swift in Sources */,
+				198BD6552037301100FEA818 /* LWTStoryViewController.swift in Sources */,
 				19696395203194D100C9D9F9 /* LWTDBManager.swift in Sources */,
 				19696385202AD46E00C9D9F9 /* LWTLearnTimerViewController.swift in Sources */,
 				19696381202AD30D00C9D9F9 /* AppDelegate.swift in Sources */,

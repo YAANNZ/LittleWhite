@@ -208,6 +208,10 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @objc func storyBtnClicked() {
+        
+        self.present(UINavigationController.init(rootViewController: LWTStoryViewController()), animated: true) {
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
