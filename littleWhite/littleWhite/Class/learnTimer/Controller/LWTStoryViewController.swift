@@ -15,8 +15,17 @@ class LWTStoryViewController: UIViewController {
 
         self.view.backgroundColor = .white
         self.navigationController?.navigationBar.barTintColor = rgbColor(r: 37, g: 37, b: 37)
+        
+        let backBtn = UIButton.init(type: UIButtonType.custom)
+        backBtn.setImage(UIImage.init(named: "nav_back"), for: UIControlState.normal)
+        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: backBtn)
+//        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "nav_back"), style: UIBarButtonItemStyle.done, target: self, action: #selector(dismissVC))
     }
 
+    @objc func dismissVC() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
