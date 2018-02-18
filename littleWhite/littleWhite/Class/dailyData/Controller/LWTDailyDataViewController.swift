@@ -67,6 +67,13 @@ class LWTDailyDataViewController: UIViewController {
             make.width.equalTo(SCREEN_WIDTH-40)
             make.centerX.equalTo(SCREEN_WIDTH/2)
         }
+        
+        let panGeusture = UIPanGestureRecognizer.init(target: self, action: #selector(panGeustures))
+        timeView.addGestureRecognizer(panGeusture)
+    }
+    
+    @objc func panGeustures() {
+        
     }
     
     @objc func shareBtnClicked() {
