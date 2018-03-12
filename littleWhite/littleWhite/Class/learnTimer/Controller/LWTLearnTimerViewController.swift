@@ -14,6 +14,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     var tableView: UITableView!
     var taskTextField: UITextField!
     var msgImgV: UIImageView!
+    var littleWhiteImgV: UIImageView!
     
     lazy var tasksArray = { () -> NSMutableArray in
         let lazyTasksArray = NSMutableArray()
@@ -80,7 +81,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
             make.height.equalTo(scaleHeight(height: 236))
         }
         
-        let littleWhiteImgV = UIImageView()
+        littleWhiteImgV = UIImageView()
         littleWhiteImgV.backgroundColor = UIColor.brown
         littleWhiteImgV.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(littleWhiteImgVTap))
@@ -96,7 +97,7 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
         msgImgV.backgroundColor = rgbColor(r: 234, g: 234, b: 234)
         msgImgV.layer.borderWidth = 1.5
         msgImgV.layer.borderColor = rgbColor(r: 93, g: 93, b: 93).cgColor
-        msgImgV.isHidden = true
+        msgImgV.alpha = 0
         self.view.addSubview(msgImgV)
         msgImgV.snp.makeConstraints { (make) in
             make.width.equalTo(scaleWidth(width: 260))
@@ -183,23 +184,30 @@ class LWTLearnTimerViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @objc func littleWhiteImgVTap() {
-        if msgImgV.isHidden{
-            self.msgImgV.isHidden = false
-            UIView.animate(withDuration: 1.0, animations: {
+        littleWhiteImgV.isUserInteractionEnabled = false
+        if msgImgV.alpha == 0.0{
+            
+            UIView.animate(withDuration: 0.6, animations: {
+                self.msgImgV.alpha = 1.0
                 self.msgImgV.snp.updateConstraints({ (make) in
                     make.bottom.equalTo(self.view.snp.bottom).offset(scaleWidth(width: -225)-49)
                 })
+                self.view.layoutIfNeeded()
+            }, completion: { (isCom) in
+                    self.littleWhiteImgV.isUserInteractionEnabled = true
             })
         } else {
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 0.6, animations: {
+                self.msgImgV.alpha = 0.0
                 self.msgImgV.snp.updateConstraints({ (make) in
                     make.bottom.equalTo(self.view.snp.bottom).offset(-(SCREEN_HEIGHT-scaleWidth(width: 175)))
                 })
+                self.view.layoutIfNeeded()
             }, completion: { (isCom) in
-                self.msgImgV.isHidden = true
                 self.msgImgV.snp.updateConstraints({ (make) in
                     make.bottom.equalTo(self.view.snp.bottom).offset(-49)
                 })
+                self.littleWhiteImgV.isUserInteractionEnabled = true
             })
         }
     }
